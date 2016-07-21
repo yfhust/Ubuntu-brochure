@@ -1,0 +1,3 @@
+timedatectl | grep local
+#如果设为1,则使用本地时间；设为0,则使用UTC时间
+sudo timedatectl set-local-rtc 1

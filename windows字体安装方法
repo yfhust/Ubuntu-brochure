@@ -1,0 +1,44 @@
+Ubuntu 12.04 LTS 中安装 windows 字体
+
+ubuntu 中的中文字体看着总觉的有点不爽，于是百度了下，这里记录下怎么在 ubuntu 12.04 中安装 windows 字体
+
+Step1. 到 windows 系统中去拷贝一份字体
+
+一般说来，windows 系统的字体都在 C/Windows/Fonts 中，所以直接进去挑选喜欢的字体就行了
+
+为了方便，我直接把 Fonts 这个文件夹中的所有字体拷贝下来，放在了 ubuntu 系统中的 ~/WinFonts 中
+
+Step2. 在 /usr/share/fonts/ 中创建一个新的文件夹 winfonts
+
+创建这个文件夹的主要目的是存放 windows 字体，免得和 ubuntu 字体混淆了
+
+执行下面的命令
+
+sudo mkdir /usr/share/fonts/winfonts
+
+Step3. 将 ~/WinFonts 的字体复制到 /usr/share/fonts/winfonts 中
+
+执行下面的命令
+
+sudo cp ~/WinFonts/* /usr/share/fonts/winfonts
+
+Step4. 修改新植入的字体的访问权限
+
+先进入该文件夹
+
+cd /usr/share/fonts/winfonts
+
+然后执行如下命令
+
+sudo chmod 744 *
+
+Step5. 生成核心字体信息
+
+分别执行如下三个命令
+
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache -f -v
+
+
+注销系统之后，就可以使用 windows 系统中的字体了

@@ -1,0 +1,4 @@
+#由于mendeley依赖libqt4-svg和libqtwebkit4，需要先安装这两个包
+sudo apt install libqt4-svg libqtwebkit4
+wget -c https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest
+sudo dpkg -i install mend*.deb

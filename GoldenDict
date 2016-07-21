@@ -1,0 +1,4 @@
+sudo apt install libvorbis-dev zlib1g-dev libhunspell-dev x11proto-record-dev qt4-qmake libqt4-dev g++ libxtst-dev libphonon-dev liblzo2-dev libbz2-dev libao-dev libavutil-dev libavformat-dev libqtwebkit-dev libeb16-dev libtiff5-dev
+qmake && make
+make install
+go to http://download.huzheng.org/下载词典
